@@ -484,8 +484,96 @@ p{
     color: white;
 }
 
+.burger{
+    padding: 9px 2px;
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+}
+
+.burger_item{
+    display: block;
+    width: 30px;
+    height: 3px;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+}
+
+.burger_item::before,
+.burger_item::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.burger_item::before{
+    top: -8px;
+}
+
+.burger_item::after{
+    bottom: -8px;
+}
 
 
+@media (min-width: 2224px){
+    .low--width{
+        width: 650px;
+    }
+}
+
+@media (max-width:991px){
+    .nav{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .intro__title{
+        font-size: 40px;
+    }
+
+    .features__item{
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px){
+    .intro{
+        width: auto;
+        height: auto;
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
+
+    .intro__title{
+        font-size: 30px;
+    }
+
+    .intro__subtitle{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .features__item{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .works__item{
+        width: 100%;
+    }
+}
 
 
 
